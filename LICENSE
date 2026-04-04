@@ -1,0 +1,32 @@
+InnerZero — Proprietary Software Licence
+Copyright (c) 2025-2026 Summers Solutions Ltd (Company No. 16448945).
+All rights reserved.
+
+InnerZero is proprietary software. By downloading or using InnerZero,
+you agree to the Terms of Service at https://innerzero.com/terms.
+
+You may NOT:
+- Copy, redistribute, or share the software or installer
+- Reverse-engineer, decompile, or disassemble the software
+- Modify, adapt, or create derivative works
+- Use the software for commercial redistribution
+- Remove or alter any copyright notices or branding
+- Claim authorship of InnerZero or any part of it
+- Host the installer on any other website or download service
+
+You MAY:
+- Download and use InnerZero for free on your own devices
+- Use content you create with InnerZero
+
+InnerZero incorporates third-party open-source components (Qwen3,
+Gemma3, Ollama, Kokoro TTS, faster-whisper, and others) which retain
+their original licences (Apache 2.0, MIT, Gemma Terms of Use, etc.).
+Full attribution is available within the application under
+Settings > General > Third-Party Licences & Notices.
+
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED. SUMMERS SOLUTIONS LTD SHALL NOT BE LIABLE FOR
+ANY DAMAGES ARISING FROM THE USE OF THIS SOFTWARE.
+
+SEE FULL TERMS AT https://innerzero.com/terms
+SEE PRIVACY POLICY AT https://innerzero.com/privacy
