@@ -24,7 +24,7 @@ A private AI assistant that runs entirely on your PC. Free forever.
 - [Features](https://innerzero.com/features)
 - [Privacy](https://innerzero.com/privacy)
 - [Support us on Ko-fi](https://ko-fi.com/innerzero)
-- [Discord](https://discord.gg/5XjCe2RNAJ)
+- [Discord](discord.gg/rn9SPXgThT)
 
 ## Licence
 
