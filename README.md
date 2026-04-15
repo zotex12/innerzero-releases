@@ -6,13 +6,13 @@ Built for anyone who wants a powerful AI assistant without giving up their priva
 
 ## Download
 
-**Latest release: v0.1.2**
+**Latest release: v0.1.3**
 
 | Platform | Download | Size | Requirements |
 |----------|----------|------|-------------|
-| **Windows** | [InnerZero-Setup-v0.1.2.exe](https://github.com/zotex12/innerzero-releases/releases/latest) | ~239 MB | Windows 10/11 64-bit |
-| **macOS** | [InnerZero-Setup-v0.1.2-mac.dmg](https://github.com/zotex12/innerzero-releases/releases/latest) | ~490 MB | macOS 12+ (Monterey or later) |
-| **Linux** | [InnerZero-v0.1.2-x86_64.AppImage](https://github.com/zotex12/innerzero-releases/releases/latest) | ~356 MB | 64-bit, glibc 2.35+, libfuse2 |
+| **Windows** | [InnerZero-Setup-0.1.3.exe](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.3/InnerZero-Setup-0.1.3.exe) | ~239 MB | Windows 10/11 64-bit |
+| **macOS** | [InnerZero-Setup-0.1.3-mac.dmg](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.3/InnerZero-Setup-0.1.3-mac.dmg) | ~490 MB | macOS 12+ (Monterey or later) |
+| **Linux** | [InnerZero-0.1.3-x86_64.AppImage](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.3/InnerZero-0.1.3-x86_64.AppImage) | ~356 MB | 64-bit, glibc 2.31+, libfuse2 |
 
 **Recommended hardware:** 16GB+ RAM. GPU optional but recommended (NVIDIA 6GB+ VRAM, AMD, or Apple Silicon for faster responses).
 
@@ -38,7 +38,11 @@ It is completely free. Not a trial, not a freemium tier, not a limited version. 
 
 **Hardware-aware setup.** InnerZero detects your CPU, GPU, and RAM on first launch and selects the best AI model for your system. Works on everything from laptops with no GPU to high-end workstations.
 
-**Multiple AI backends.** Ollama (default, managed automatically) or LM Studio (connect to models you already have loaded). Optional cloud mode supports OpenAI, Anthropic, Google, DeepSeek, and Qwen with your own API keys, zero markup.
+**Multiple AI backends.** Ollama (default, managed automatically) or LM Studio (connect to models you already have loaded). Optional cloud mode supports 7 providers (OpenAI, Anthropic, Google, DeepSeek, Qwen, xAI Grok, Kimi) with your own API keys, zero markup.
+
+**Privacy controls.** Offline mode blocks all outbound network requests. Connection log shows every outbound request. Privacy blacklist scrubs sensitive terms from cloud messages before they leave your machine. My Privacy dashboard gives you centralised control over all privacy settings.
+
+**Telegram remote access.** Control Zero from your phone via a Telegram bot with encrypted token storage, chat ID whitelisting, and desktop chat mirroring.
 
 **Offline knowledge packs.** Download Wikipedia and reference databases for fully offline information retrieval. No internet required after setup.
 
@@ -53,7 +57,7 @@ It is completely free. Not a trial, not a freemium tier, not a limited version. 
 | | InnerZero | ChatGPT | GPT4All | LM Studio | Jan |
 |---|---|---|---|---|---|
 | Runs 100% locally | Yes | No | Yes | Yes | Yes |
-| Personal memory across sessions | Yes (8-layer system) | Limited | No | No | No |
+| Personal memory across sessions | Yes | Limited | No | No | No |
 | Voice mode (local) | Yes | No (cloud) | No | No | No |
 | Built-in tools (30+) | Yes | Yes (cloud) | No | No | Limited |
 | AI agent system | Yes | Yes (cloud) | No | No | No |
