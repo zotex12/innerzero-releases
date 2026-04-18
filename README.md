@@ -6,13 +6,13 @@ Built for anyone who wants a powerful AI assistant without giving up their priva
 
 ## Download
 
-**Latest release: v0.1.3**
+**Latest release: v0.1.4**
 
 | Platform | Download | Size | Requirements |
 |----------|----------|------|-------------|
-| **Windows** | [InnerZero-Setup-0.1.3.exe](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.3/InnerZero-Setup-0.1.3.exe) | ~239 MB | Windows 10/11 64-bit |
-| **macOS** | [InnerZero-Setup-0.1.3-mac.dmg](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.3/InnerZero-Setup-0.1.3-mac.dmg) | ~490 MB | macOS 12+ (Monterey or later) |
-| **Linux** | [InnerZero-0.1.3-x86_64.AppImage](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.3/InnerZero-0.1.3-x86_64.AppImage) | ~356 MB | 64-bit, glibc 2.31+, libfuse2 |
+| **Windows** | [InnerZero-Setup-0.1.4.exe](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.4/InnerZero-Setup-0.1.4.exe) | ~239 MB | Windows 10/11 64-bit |
+| **macOS** | [InnerZero-Setup-0.1.4-mac.dmg](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.4/InnerZero-Setup-0.1.4-mac.dmg) | ~490 MB | macOS 12+ (Monterey or later) |
+| **Linux** | [InnerZero-0.1.4-x86_64.AppImage](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.4/InnerZero-0.1.4-x86_64.AppImage) | ~356 MB | 64-bit, glibc 2.31+, libfuse2 |
 
 **Recommended hardware:** 16GB+ RAM. GPU optional but recommended (NVIDIA 6GB+ VRAM, AMD, or Apple Silicon for faster responses).
 
