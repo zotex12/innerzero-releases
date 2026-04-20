@@ -6,7 +6,19 @@ Built for anyone who wants a powerful AI assistant without giving up their priva
 
 ## Download
 
+**[Latest release](https://github.com/zotex12/innerzero-releases/releases/latest)** or go to [innerzero.com/download](https://innerzero.com/download) for guided platform detection.
+
+Available for **Windows 10/11**, **macOS 12+**, and **Linux** (64-bit, glibc 2.31+, libfuse2).
+
+Recommended hardware: 16GB+ RAM. GPU optional but recommended (NVIDIA 6GB+ VRAM, AMD, or Apple Silicon for faster responses).
+
+InnerZero handles all setup automatically. It downloads and configures the right AI model for your hardware on first launch.
+
 **Latest release: v0.1.4**
+Platform    Download                              Size
+Windows     InnerZero-Setup-0.1.4.exe             ~239 MB
+macOS       InnerZero-Setup-0.1.4-mac.dmg         ~490 MB
+Linux       InnerZero-0.1.4-x86_64.AppImage       ~356 MB
 
 | Platform | Download | Size | Requirements |
 |----------|----------|------|-------------|
