@@ -14,17 +14,17 @@ Recommended hardware: 16GB+ RAM. GPU optional but recommended (NVIDIA 6GB+ VRAM,
 
 InnerZero handles all setup automatically. It downloads and configures the right AI model for your hardware on first launch.
 
-**Latest release: v0.1.4**
+**Latest release: v0.1.5**
 Platform    Download                              Size
-Windows     InnerZero-Setup-0.1.4.exe             ~239 MB
-macOS       InnerZero-Setup-0.1.4-mac.dmg         ~490 MB
-Linux       InnerZero-0.1.4-x86_64.AppImage       ~356 MB
+Windows     InnerZero-Setup-0.1.5.exe             ~244 MB
+macOS       InnerZero-Setup-0.1.5-mac.dmg         ~532 MB
+Linux       InnerZero-0.1.5-x86_64.AppImage       ~479 MB
 
 | Platform | Download | Size | Requirements |
 |----------|----------|------|-------------|
-| **Windows** | [InnerZero-Setup-0.1.4.exe](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.4/InnerZero-Setup-0.1.4.exe) | ~239 MB | Windows 10/11 64-bit |
-| **macOS** | [InnerZero-Setup-0.1.4-mac.dmg](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.4/InnerZero-Setup-0.1.4-mac.dmg) | ~490 MB | macOS 12+ (Monterey or later) |
-| **Linux** | [InnerZero-0.1.4-x86_64.AppImage](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.4/InnerZero-0.1.4-x86_64.AppImage) | ~356 MB | 64-bit, glibc 2.31+, libfuse2 |
+| **Windows** | [InnerZero-Setup-0.1.5.exe](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.5/InnerZero-Setup-0.1.5.exe) | ~244 MB | Windows 10/11 64-bit |
+| **macOS** | [InnerZero-Setup-0.1.5-mac.dmg](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.5/InnerZero-Setup-0.1.5-mac.dmg) | ~532 MB | macOS 12+ (Monterey or later) |
+| **Linux** | [InnerZero-0.1.5-x86_64.AppImage](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.5/InnerZero-0.1.5-x86_64.AppImage) | ~479 MB | 64-bit, glibc 2.31+, libfuse2 |
 
 **Recommended hardware:** 16GB+ RAM. GPU optional but recommended (NVIDIA 6GB+ VRAM, AMD, or Apple Silicon for faster responses).
 
