@@ -10,23 +10,32 @@ Built for anyone who wants a powerful AI assistant without giving up their priva
 
 Available for **Windows 10/11**, **macOS 14+**, and **Linux** (64-bit, glibc 2.31+, libfuse2).
 
-Recommended hardware: 16GB+ RAM. GPU optional but recommended (NVIDIA 6GB+ VRAM, AMD, or Apple Silicon for faster responses).
-
-InnerZero handles all setup automatically. It downloads and configures the right AI model for your hardware on first launch.
-
-**Latest release: v0.1.6**
+**Latest release: v0.1.7**
 
 | Platform | Download | Size | Requirements |
 |----------|----------|------|-------------|
-| **Windows** | [InnerZero-Setup-0.1.6.exe](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.6/InnerZero-Setup-0.1.6.exe) | ~1.32 GB | Windows 10/11 64-bit |
-| **macOS** | [InnerZero-Setup-0.1.6-mac.dmg](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.6/InnerZero-Setup-0.1.6-mac.dmg) | ~654 MB | macOS 14+ (Sonoma or later, Apple Silicon) |
-| **Linux** | [InnerZero-0.1.6-x86_64.AppImage](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.6/InnerZero-0.1.6-x86_64.AppImage) | ~1.24 GB | 64-bit, glibc 2.31+, libfuse2 |
+| **Windows** | [InnerZero-Setup-0.1.7.exe](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.7/InnerZero-Setup-0.1.7.exe) | ~1.18 GB | Windows 10/11 64-bit |
+| **macOS** | [InnerZero-Setup-0.1.7-mac.dmg](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.7/InnerZero-Setup-0.1.7-mac.dmg) | ~722 MB | macOS 14+ (Sonoma or later, Apple Silicon) |
+| **Linux** | [InnerZero-0.1.7-x86_64.AppImage](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.7/InnerZero-0.1.7-x86_64.AppImage) | ~1.31 GB | 64-bit, glibc 2.31+, libfuse2 |
 
-**macOS install note:** the DMG is signed with Developer ID and runs under hardened runtime but is not yet notarised. On first launch, right-click the app and select Open, then click Open again to bypass Gatekeeper. Notarisation returns in a future release.
+**macOS install note:** the DMG is signed with Developer ID, notarised by Apple, and stapled. It opens with a normal double click, with no Gatekeeper warning and no workaround needed.
+
+Each release includes SHA256 checksums (`windows.sha256`, `macos.sha256`, `linux.sha256`) on the [release page](https://github.com/zotex12/innerzero-releases/releases/latest).
 
 **Recommended hardware:** 16GB+ RAM. GPU optional but recommended (NVIDIA 6GB+ VRAM, AMD, or Apple Silicon for faster responses).
 
 InnerZero handles all setup automatically. It downloads and configures the right AI model for your hardware on first launch.
+
+## What's New in v0.1.7
+
+- **26 languages.** The whole interface, menus, and Zero's replies in your language, with right-to-left support for Arabic, Hebrew, Persian, and Urdu. Works fully offline.
+- **Prompt Library, voice panels, and dictation.** Save and reuse prompts, transcribe speech or read text aloud on the Voice page, and dictate straight into chat.
+- **Files, images, and artifacts.** Attach documents or paste a screenshot, with local text recognition on images, plus an artifacts panel that exports answers to PDF, Word, Markdown, and more.
+- **Action Hub.** An opt-in research and apply assistant that gathers web sources with your own Apify key and can help fill in and submit job applications, with your approval.
+- **macOS signed and notarised.** The Mac build now opens with a normal double click, no Gatekeeper workaround.
+- **Proxy support, a one-button first-run setup, and faster, smaller installs.**
+
+See the full [changelog](https://innerzero.com/changelog).
 
 ## What Is InnerZero?
 
@@ -38,9 +47,15 @@ It is completely free. Not a trial, not a freemium tier, not a limited version. 
 
 **Private by design.** All AI processing runs on your hardware. No cloud servers, no API calls (unless you choose to enable optional cloud mode with your own API keys), no telemetry, no tracking. Your conversations are stored in a local database that never leaves your machine.
 
+**Speaks your language.** The entire interface is available in 26 languages, and Zero replies in the one you pick. Switch any time in Settings, with right-to-left support for Arabic, Hebrew, Persian, and Urdu. A one-time upgrade keeps your saved memories searchable across every language. Works fully offline.
+
 **Personal memory system.** InnerZero remembers your conversations, preferences, projects, and facts across sessions. It builds structured memory over time, so it knows your name, your work context, and your preferences without you repeating yourself. Memory improves over time as InnerZero learns what matters to you, all without sending anything to the cloud.
 
-**Voice and text.** Full voice mode with local speech recognition (Whisper) and local text-to-speech (Kokoro). Talk to your AI assistant hands-free. All voice processing runs locally.
+**Voice and text.** Full voice mode with local speech recognition (Whisper) and local text-to-speech (Kokoro). Talk to your AI assistant hands-free, all processed locally. The Voice page also has standalone speech-to-text and text-to-speech panels, and you can dictate straight into the chat box.
+
+**Prompt Library.** Save your best prompts in folders, mark favourites, and drop them into chat in one click.
+
+**Files, images, and artifacts.** Attach documents or paste a screenshot in chat, with local text recognition on images. Document-style answers open in an artifacts panel you can read full screen, edit with the AI, and export to PDF, Word, Markdown, and more with real selectable text.
 
 **30+ built-in tools.** Web search, file read/write, URL fetching, calculator, system info, clipboard, timers, reminders, notes, weather, dictionary, screen reading, and more.
 
@@ -48,13 +63,15 @@ It is completely free. Not a trial, not a freemium tier, not a limited version. 
 
 **Proactive Assistant.** Schedule briefings and reminders so InnerZero brings information to you, not just on demand. Natural-language scheduling ("every weekday at 9am"), quiet hours, and an optional Telegram bridge for briefings on your phone.
 
+**Action Hub.** An opt-in research and apply assistant. With your own Apify key, Zero gathers and summarises web sources; with your saved job profile, it can help fill in and submit job applications in a fresh, isolated browser, asking for your approval before it acts.
+
 **AI Specialists.** Domain-specific helpers handle focused tasks like coding and automation. You stay in control with explicit approval before any file changes are written.
 
 **Hardware-aware setup.** InnerZero detects your CPU, GPU, and RAM on first launch and selects the best AI model for your system. Works on everything from laptops with no GPU to high-end workstations.
 
 **Multiple AI backends.** Ollama (default, managed automatically) or LM Studio (connect to models you already have loaded). Optional cloud mode supports 7 providers (OpenAI, Anthropic, Google, DeepSeek, Qwen, xAI Grok, Kimi) with your own API keys, zero markup.
 
-**Privacy controls.** Offline mode blocks all outbound network requests. Connection log shows every outbound request. Privacy blacklist scrubs sensitive terms from cloud messages before they leave your machine. My Privacy dashboard gives you centralised control over all privacy settings.
+**Privacy controls.** Offline mode blocks all outbound network requests. A single fail-closed egress guard checks every outbound connection, so Offline and Private modes hold even if a tool tries to reach out. Connection log shows every outbound request. Privacy blacklist scrubs sensitive terms from cloud messages before they leave your machine. My Privacy dashboard gives you centralised control over all privacy settings. A proxy box lets you reach the internet from behind a corporate or university proxy, while local AI traffic is never proxied.
 
 **Telegram remote access.** Control Zero from your phone via a Telegram bot with encrypted token storage, chat ID whitelisting, and desktop chat mirroring. Separate from the Proactive Assistant Telegram bridge above; reuses the same bot setup.
 
