@@ -121,7 +121,7 @@ Cloud mode is off by default. When enabled, your prompts are sent to the AI prov
 - [Privacy Policy](https://innerzero.com/privacy)
 - [Learn (Blog)](https://innerzero.com/blog)
 - [Changelog](https://innerzero.com/changelog)
-- [Discord Community](https://discord.gg/5XjCe2RNAJ)
+- [Discord Community](discord.gg/rn9SPXgThT)
 - [Support Development on Ko-fi](https://ko-fi.com/innerzero)
 
 ## Licence
