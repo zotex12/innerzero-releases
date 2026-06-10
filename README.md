@@ -10,13 +10,13 @@ Built for anyone who wants a powerful AI assistant without giving up their priva
 
 Available for **Windows 10/11**, **macOS 14+**, and **Linux** (64-bit, glibc 2.31+, libfuse2).
 
-**Latest release: v0.1.7**
+**Latest release: v0.1.8**
 
 | Platform | Download | Size | Requirements |
 |----------|----------|------|-------------|
-| **Windows** | [InnerZero-Setup-0.1.7.exe](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.7/InnerZero-Setup-0.1.7.exe) | ~1.18 GB | Windows 10/11 64-bit |
-| **macOS** | [InnerZero-Setup-0.1.7-mac.dmg](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.7/InnerZero-Setup-0.1.7-mac.dmg) | ~722 MB | macOS 14+ (Sonoma or later, Apple Silicon) |
-| **Linux** | [InnerZero-0.1.7-x86_64.AppImage](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.7/InnerZero-0.1.7-x86_64.AppImage) | ~1.31 GB | 64-bit, glibc 2.31+, libfuse2 |
+| **Windows** | [InnerZero-Setup-0.1.8.exe](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.8/InnerZero-Setup-0.1.8.exe) | ~1.18 GB | Windows 10/11 64-bit |
+| **macOS** | [InnerZero-Setup-0.1.8-mac.dmg](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.8/InnerZero-Setup-0.1.8-mac.dmg) | ~744 MB | macOS 14+ (Sonoma or later, Apple Silicon) |
+| **Linux** | [InnerZero-0.1.8-x86_64.AppImage](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.8/InnerZero-0.1.8-x86_64.AppImage) | ~1.32 GB | 64-bit, glibc 2.31+, libfuse2 |
 
 **macOS install note:** the DMG is signed with Developer ID, notarised by Apple, and stapled. It opens with a normal double click, with no Gatekeeper warning and no workaround needed.
 
@@ -26,20 +26,19 @@ Each release includes SHA256 checksums (`windows.sha256`, `macos.sha256`, `linux
 
 InnerZero handles all setup automatically. It downloads and configures the right AI model for your hardware on first launch.
 
-## What's New in v0.1.7
+## What's New in v0.1.8
 
-- **26 languages.** The whole interface, menus, and Zero's replies in your language, with right-to-left support for Arabic, Hebrew, Persian, and Urdu. Works fully offline.
-- **Prompt Library, voice panels, and dictation.** Save and reuse prompts, transcribe speech or read text aloud on the Voice page, and dictate straight into chat.
-- **Files, images, and artifacts.** Attach documents or paste a screenshot, with local text recognition on images, plus an artifacts panel that exports answers to PDF, Word, Markdown, and more.
-- **Action Hub.** An opt-in research and apply assistant that gathers web sources with your own Apify key and can help fill in and submit job applications, with your approval.
-- **macOS signed and notarised.** The Mac build now opens with a normal double click, no Gatekeeper workaround.
-- **Proxy support, a one-button first-run setup, and faster, smaller installs.**
+- **llama.cpp engine support.** Run InnerZero against your own llama-server. Pick llama.cpp in Settings, point it at your server, and chat, voice, and memory all route through it, with a picker for your GGUF models.
+- **AI & Models settings tab.** Your AI engine, hardware, models, performance, and cloud API keys now live together in one tab, with cloud mode on the My Privacy page and plans on Plan & Usage.
+- **Open at login.** A new toggle starts InnerZero automatically when you sign in, on Windows, macOS, and Linux. Off by default and it never asks for admin rights.
+- **Action Hub saved actions and scheduling.** Save a research or apply action once, re-run it in one click, or put it on a schedule. Scheduled runs always stop at a draft for your review.
+- **Fixes and polish.** Chat messages queued behind a still-reading attachment now send automatically, model downloads show real error messages, GGUF model names keep their variant tags, and Voice settings labels are in plain language across all 26 interface languages.
 
 See the full [changelog](https://innerzero.com/changelog).
 
 ## What Is InnerZero?
 
-InnerZero is a desktop AI assistant that processes everything locally using open-source AI models through [Ollama](https://ollama.com) or [LM Studio](https://lmstudio.ai). Unlike ChatGPT, Gemini, or other cloud AI services, InnerZero never sends your data to external servers.
+InnerZero is a desktop AI assistant that processes everything locally using open-source AI models through [Ollama](https://ollama.com), [LM Studio](https://lmstudio.ai), or your own [llama.cpp](https://github.com/ggml-org/llama.cpp) server. Unlike ChatGPT, Gemini, or other cloud AI services, InnerZero never sends your data to external servers.
 
 It is completely free. Not a trial, not a freemium tier, not a limited version. The full application with all features runs on your hardware at no cost.
 
@@ -69,7 +68,7 @@ It is completely free. Not a trial, not a freemium tier, not a limited version. 
 
 **Hardware-aware setup.** InnerZero detects your CPU, GPU, and RAM on first launch and selects the best AI model for your system. Works on everything from laptops with no GPU to high-end workstations.
 
-**Multiple AI backends.** Ollama (default, managed automatically) or LM Studio (connect to models you already have loaded). Optional cloud mode supports 7 providers (OpenAI, Anthropic, Google, DeepSeek, Qwen, xAI Grok, Kimi) with your own API keys, zero markup.
+**Multiple AI backends.** Ollama (default, managed automatically), LM Studio (connect to models you already have loaded), or your own llama.cpp llama-server with a GGUF model picker. Optional cloud mode supports 7 providers (OpenAI, Anthropic, Google, DeepSeek, Qwen, xAI Grok, Kimi) with your own API keys, zero markup.
 
 **Privacy controls.** Offline mode blocks all outbound network requests. A single fail-closed egress guard checks every outbound connection, so Offline and Private modes hold even if a tool tries to reach out. Connection log shows every outbound request. Privacy blacklist scrubs sensitive terms from cloud messages before they leave your machine. My Privacy dashboard gives you centralised control over all privacy settings. A proxy box lets you reach the internet from behind a corporate or university proxy, while local AI traffic is never proxied.
 
