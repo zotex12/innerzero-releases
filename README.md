@@ -10,13 +10,13 @@ Built for anyone who wants a powerful AI assistant without giving up their priva
 
 Available for **Windows 10/11**, **macOS 14+**, and **Linux** (64-bit, glibc 2.31+, libfuse2).
 
-**Latest release: v0.1.8**
+**Latest release: v0.1.9**
 
 | Platform | Download | Size | Requirements |
 |----------|----------|------|-------------|
-| **Windows** | [InnerZero-Setup-0.1.8.exe](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.8/InnerZero-Setup-0.1.8.exe) | ~1.18 GB | Windows 10/11 64-bit |
-| **macOS** | [InnerZero-Setup-0.1.8-mac.dmg](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.8/InnerZero-Setup-0.1.8-mac.dmg) | ~744 MB | macOS 14+ (Sonoma or later, Apple Silicon) |
-| **Linux** | [InnerZero-0.1.8-x86_64.AppImage](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.8/InnerZero-0.1.8-x86_64.AppImage) | ~1.32 GB | 64-bit, glibc 2.31+, libfuse2 |
+| **Windows** | [InnerZero-Setup-0.1.9.exe](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.9/InnerZero-Setup-0.1.9.exe) | ~1.18 GB | Windows 10/11 64-bit |
+| **macOS** | [InnerZero-Setup-0.1.9-mac.dmg](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.9/InnerZero-Setup-0.1.9-mac.dmg) | ~738 MB | macOS 14+ (Sonoma or later, Apple Silicon) |
+| **Linux** | [InnerZero-0.1.9-x86_64.AppImage](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.9/InnerZero-0.1.9-x86_64.AppImage) | ~1.32 GB | 64-bit, glibc 2.31+, libfuse2 |
 
 **macOS install note:** the DMG is signed with Developer ID, notarised by Apple, and stapled. It opens with a normal double click, with no Gatekeeper warning and no workaround needed.
 
@@ -26,13 +26,11 @@ Each release includes SHA256 checksums (`windows.sha256`, `macos.sha256`, `linux
 
 InnerZero handles all setup automatically. It downloads and configures the right AI model for your hardware on first launch.
 
-## What's New in v0.1.8
+## What's New in v0.1.9
 
-- **llama.cpp engine support.** Run InnerZero against your own llama-server. Pick llama.cpp in Settings, point it at your server, and chat, voice, and memory all route through it, with a picker for your GGUF models.
-- **AI & Models settings tab.** Your AI engine, hardware, models, performance, and cloud API keys now live together in one tab, with cloud mode on the My Privacy page and plans on Plan & Usage.
-- **Open at login.** A new toggle starts InnerZero automatically when you sign in, on Windows, macOS, and Linux. Off by default and it never asks for admin rights.
-- **Action Hub saved actions and scheduling.** Save a research or apply action once, re-run it in one click, or put it on a schedule. Scheduled runs always stop at a draft for your review.
-- **Fixes and polish.** Chat messages queued behind a still-reading attachment now send automatically, model downloads show real error messages, GGUF model names keep their variant tags, and Voice settings labels are in plain language across all 26 interface languages.
+- **Refreshed cloud model catalogue (bring your own key).** If you connect your own provider API key, InnerZero now offers the current flagship and tier models for each provider: OpenAI GPT-5.6 and GPT-5.5, Anthropic Claude Opus 4.8, Sonnet 5 and Fable 5, Google Gemini 3.5 Flash, 3.1 Flash-Lite and 3.1 Pro, Qwen 3.7 Max and Plus, xAI Grok 4.5 and 4.3, Kimi K3, K2.6 and K2.7 Code, and DeepSeek V4 Pro. The old xAI Grok ids that no longer exist upstream were retired.
+- **Fixed bring your own OpenAI for GPT-5 and o-series models.** Warmup and chat were failing with a request error on these models. InnerZero now sends the correct token limit with a reasoning-token allowance, so they respond normally. GPT-4o and GPT-4.1 keys were unaffected.
+- **Build and packaging fixes.** Refreshed the Windows installer runtime checksum and added a missing Linux build dependency, so all three platform installers build and ship cleanly.
 
 See the full [changelog](https://innerzero.com/changelog).
 
