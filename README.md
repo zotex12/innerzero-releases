@@ -10,13 +10,13 @@ Built for anyone who wants a powerful AI assistant without giving up their priva
 
 Available for **Windows 10/11**, **macOS 14+**, and **Linux** (64-bit, glibc 2.31+, libfuse2).
 
-**Latest release: v0.1.9**
+**Latest release: v0.2.0**
 
 | Platform | Download | Size | Requirements |
 |----------|----------|------|-------------|
-| **Windows** | [InnerZero-Setup-0.1.9.exe](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.9/InnerZero-Setup-0.1.9.exe) | ~1.18 GB | Windows 10/11 64-bit |
-| **macOS** | [InnerZero-Setup-0.1.9-mac.dmg](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.9/InnerZero-Setup-0.1.9-mac.dmg) | ~738 MB | macOS 14+ (Sonoma or later, Apple Silicon) |
-| **Linux** | [InnerZero-0.1.9-x86_64.AppImage](https://github.com/zotex12/innerzero-releases/releases/download/v0.1.9/InnerZero-0.1.9-x86_64.AppImage) | ~1.32 GB | 64-bit, glibc 2.31+, libfuse2 |
+| **Windows** | [InnerZero-Setup-0.2.0.exe](https://github.com/zotex12/innerzero-releases/releases/download/v0.2.0/InnerZero-Setup-0.2.0.exe) | ~1.18 GB | Windows 10/11 64-bit |
+| **macOS** | [InnerZero-Setup-0.2.0-mac.dmg](https://github.com/zotex12/innerzero-releases/releases/download/v0.2.0/InnerZero-Setup-0.2.0-mac.dmg) | ~736 MB | macOS 14+ (Sonoma or later, Apple Silicon) |
+| **Linux** | [InnerZero-0.2.0-x86_64.AppImage](https://github.com/zotex12/innerzero-releases/releases/download/v0.2.0/InnerZero-0.2.0-x86_64.AppImage) | ~1.32 GB | 64-bit, glibc 2.31+, libfuse2 |
 
 **macOS install note:** the DMG is signed with Developer ID, notarised by Apple, and stapled. It opens with a normal double click, with no Gatekeeper warning and no workaround needed.
 
@@ -26,11 +26,20 @@ Each release includes SHA256 checksums (`windows.sha256`, `macos.sha256`, `linux
 
 InnerZero handles all setup automatically. It downloads and configures the right AI model for your hardware on first launch.
 
-## What's New in v0.1.9
+## What's New in v0.2.0
 
-- **Refreshed cloud model catalogue (bring your own key).** If you connect your own provider API key, InnerZero now offers the current flagship and tier models for each provider: OpenAI GPT-5.6 and GPT-5.5, Anthropic Claude Opus 4.8, Sonnet 5 and Fable 5, Google Gemini 3.5 Flash, 3.1 Flash-Lite and 3.1 Pro, Qwen 3.7 Max and Plus, xAI Grok 4.5 and 4.3, Kimi K3, K2.6 and K2.7 Code, and DeepSeek V4 Pro. The old xAI Grok ids that no longer exist upstream were retired.
-- **Fixed bring your own OpenAI for GPT-5 and o-series models.** Warmup and chat were failing with a request error on these models. InnerZero now sends the correct token limit with a reasoning-token allowance, so they respond normally. GPT-4o and GPT-4.1 keys were unaffected.
-- **Build and packaging fixes.** Refreshed the Windows installer runtime checksum and added a missing Linux build dependency, so all three platform installers build and ship cleanly.
+The largest update since launch, focused on reliability, honesty, accessibility, and privacy.
+
+- **High Contrast theme and accessibility sweep.** A seventh free theme with a true-black background and maximum-contrast text, plus WCAG AA contrast on every theme and an 11px minimum text size across the app. Screen readers now narrate the interface in your selected language.
+- **Bundled fonts, no font CDN.** Launching InnerZero no longer contacts Google's font servers, so the Offline and Private badges are truthful from the first moment.
+- **Drag and drop into chat, plus a Copy button.** Drop a document or screenshot straight onto the chat box, and copy any reply as clean plain text.
+- **Smarter first-run setup.** Setup can adopt models you already have instead of re-downloading, verifies the model really landed before declaring success, asks before changing models on a re-run, and reports failures honestly instead of a clean-looking finish.
+- **Honest startup and status.** The window opens immediately with a progress line naming each step. The status bar now tells the truth about cloud availability, names the engine that is actually down, and the local AI Retry button genuinely restarts it.
+- **Fewer wrong answers.** The assistant no longer fires tools on innocent words like "update", no longer returns raw encyclopedia dumps for simple questions, and engine errors are no longer stored into memory where they could contaminate later replies.
+- **Approvals you can trust.** A failed approved action shows as a failure rather than a green tick, decided cards stay decided, and a model reply can no longer draw a working approval button of its own.
+- **Costs page accuracy.** All eight time periods work and bring-your-own-key estimates now use provider prices verified in August 2026. DeepSeek estimates use its new schedule's peak rate, so off-peak usage may be over-stated but is never under-stated.
+- **Platform fixes.** Windows saves to your real Documents folder even under OneDrive redirection and guards in-app updates against a mid-install relaunch. macOS and Linux now see models in your existing Ollama store.
+- **Dozens of fixes** across chat clearing, page navigation races, voice capture, calendar privacy cleanup, specialist agents, and Unrestricted Mode reliability.
 
 See the full [changelog](https://innerzero.com/changelog).
 
