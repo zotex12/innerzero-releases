@@ -31,7 +31,6 @@ InnerZero handles all setup automatically. It downloads and configures the right
 The largest update since launch, focused on reliability, honesty, accessibility, and privacy.
 
 - **High Contrast theme and accessibility sweep.** A seventh free theme with a true-black background and maximum-contrast text, plus WCAG AA contrast on every theme and an 11px minimum text size across the app. Screen readers now narrate the interface in your selected language.
-- **Bundled fonts, no font CDN.** Launching InnerZero no longer contacts Google's font servers, so the Offline and Private badges are truthful from the first moment.
 - **Drag and drop into chat, plus a Copy button.** Drop a document or screenshot straight onto the chat box, and copy any reply as clean plain text.
 - **Smarter first-run setup.** Setup can adopt models you already have instead of re-downloading, verifies the model really landed before declaring success, asks before changing models on a re-run, and reports failures honestly instead of a clean-looking finish.
 - **Honest startup and status.** The window opens immediately with a progress line naming each step. The status bar now tells the truth about cloud availability, names the engine that is actually down, and the local AI Retry button genuinely restarts it.
