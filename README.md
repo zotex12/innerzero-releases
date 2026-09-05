@@ -10,13 +10,13 @@ Built for anyone who wants a powerful AI assistant without giving up their priva
 
 Available for **Windows 10/11**, **macOS 14+**, and **Linux** (64-bit, glibc 2.31+, libfuse2).
 
-**Latest release: v0.2.1**
+**Latest release: v0.2.2**
 
 | Platform | Download | Size | Requirements |
 |----------|----------|------|-------------|
-| **Windows** | [InnerZero-Setup-0.2.1.exe](https://github.com/zotex12/innerzero-releases/releases/download/v0.2.1/InnerZero-Setup-0.2.1.exe) | ~1.24 GB | Windows 10/11 64-bit |
-| **macOS** | [InnerZero-Setup-0.2.1-mac.dmg](https://github.com/zotex12/innerzero-releases/releases/download/v0.2.1/InnerZero-Setup-0.2.1-mac.dmg) | ~775 MB | macOS 14+ (Sonoma or later, Apple Silicon) |
-| **Linux** | [InnerZero-0.2.1-x86_64.AppImage](https://github.com/zotex12/innerzero-releases/releases/download/v0.2.1/InnerZero-0.2.1-x86_64.AppImage) | ~1.18 GB | 64-bit, glibc 2.31+, libfuse2 |
+| **Windows** | [InnerZero-Setup-0.2.2.exe](https://github.com/zotex12/innerzero-releases/releases/download/v0.2.2/InnerZero-Setup-0.2.2.exe) | ~1.24 GB | Windows 10/11 64-bit |
+| **macOS** | [InnerZero-Setup-0.2.2-mac.dmg](https://github.com/zotex12/innerzero-releases/releases/download/v0.2.2/InnerZero-Setup-0.2.2-mac.dmg) | ~780 MB | macOS 14+ (Sonoma or later, Apple Silicon) |
+| **Linux** | [InnerZero-0.2.2-x86_64.AppImage](https://github.com/zotex12/innerzero-releases/releases/download/v0.2.2/InnerZero-0.2.2-x86_64.AppImage) | ~1.18 GB | 64-bit, glibc 2.31+, libfuse2 |
 
 **macOS install note:** the DMG is signed with Developer ID, notarised by Apple, and stapled. It opens with a normal double click, with no Gatekeeper warning and no workaround needed.
 
@@ -26,16 +26,17 @@ Each release includes SHA256 checksums (`windows.sha256`, `macos.sha256`, `linux
 
 InnerZero handles all setup automatically. It downloads and configures the right AI model for your hardware on first launch.
 
-## What's New in v0.2.1
+## What's New in v0.2.2
 
-A runtime update, better feedback, and a way in for machines that cannot run a local model.
+A voice and hardware update, with Offline mode now covering AI servers on your own network.
 
-- **Bundled Ollama updated from 0.22 to 0.32.** Vulkan GPU acceleration is on by default, so AMD and Intel GPUs work out of the box and the old experimental Vulkan toggle is gone. NVIDIA GPUs need driver 550 or newer for GPU acceleration, or 570 or newer for older Maxwell and Pascal cards (which may also run a little slower than before); older drivers fall back to the CPU. On Windows, AMD cards on the ROCm path need ROCm 7 drivers, and RDNA2 cards are now served by Vulkan instead. Machines with only an integrated GPU may need `OLLAMA_IGPU_ENABLE=1` in the environment, because Ollama 0.32 hides integrated GPUs by default.
-- **Attach your app log to feedback.** The sidebar feedback box can include the last 15 minutes, hour, or day of InnerZero's own activity log, reduced to event names, labels, and sizes only (prompts, replies, file paths, and your username never leave the machine), with a preview before anything is sent. Settings > General gained an Open Logs Folder row.
-- **Ask Zero about InnerZero itself.** Questions like "how do I change the theme" or "what can you do" are answered from a built-in guide to the app.
-- **Network Ollama for low-spec machines.** If your PC cannot run a local model, point Settings > AI & Models at another computer on your network running Ollama and chat works from there. The chat banner, blocked messages, and the setup wizard offer three ways forward on that tier: a cloud plan or API key, choosing a tier yourself, or a network Ollama server.
-- **Smaller improvements.** Office documents (.pptx, .docx, .xlsx and more) are recognised as files in chat; Settings > Hardware names every detected GPU; 32 GB machines that report 30 to 31 GB usable land on the right tier; the first-run GPU check survives a cold first load; voice follows your chosen cloud source; unvetted models are flagged in the voice and setup pickers.
-- **Fixes.** A No Local Model machine no longer answers "hi" and then blocks every real question; updating on Windows removes the previous version's runtime libraries; deleting a Google-pushed calendar event keeps its link until you confirm; Unrestricted Mode's manual install instructions no longer vanish when you leave the Experimental tab.
+- **Voice on a network Ollama server.** On the No Local Model tier, voice now works when you choose a voice-capable model that the connected Ollama server actually has, so a low-spec machine gets spoken conversation from another computer on your network, and the voice warm-up only reports ready once that server has answered.
+- **Speech models download during setup.** The first-run setup bar shows a third segment for the speech models (speech recognition, the text-to-speech voice and the voice-activity detector) with real progress, and the Voice page says when a first-time download is happening instead of sitting on "Loading models...". If voice cannot start (no microphone could be opened, speech recognition did not load), the Voice page and the chat microphone now say so and return to a ready state.
+- **Offline mode blocks a network AI server too.** With Offline on, nothing you say, nothing from memory and nothing else that carries your content reaches an Ollama, LM Studio or llama.cpp server on another machine, the automatic Ollama status and keep-alive calls stop as well, and an Offline setting that cannot be read is treated as on. A few plain is-the-server-up checks still reach a network server and are next on the list. Private mode with a network server is unchanged. The bundled Ollama runtime also no longer makes unsolicited requests to Ollama's cloud service.
+- **GPU detection on newer cards.** Hardware detection gives the bundled runtime's start-up the time it needs (up to 90 seconds on Windows) instead of giving up early, Settings > Hardware says when detection is still running or did not complete instead of reporting CPU only, the first-run check notices a model that landed on the CPU of a GPU machine and reports it, and detection no longer starts a second AI server, so Settings > Hardware opens faster.
+- **Memory recall.** What you said is matched more closely against what Zero remembers, a newer version of a fact outranks the older one, and the overnight memory pass now reads your side of the conversation as well as Zero's.
+- **Smaller improvements.** The chat history notice explains that Zero still remembers what you talked about and can be snoozed for seven days; the dashboard shows the live status from the first paint; the Briefings Test-run flash survives a card refresh; Quick Add keeps your draft across tabs; questions about another product's schedule, personality or knowledge packs are no longer mistaken for questions about InnerZero itself; the installer EULA covers feedback and attached logs and points at innerzero.com/pricing for the Business Licence.
+- **Fixes.** /forget by id works for every memory id; a network Ollama address with no host name is rejected; the status bar no longer triggers a hardware detection when the tier pill is hidden; a failed model unload before the first-run GPU check no longer moves a healthy GPU machine to the CPU tier; local models no longer read memory relevance percentages back as facts, and asking Zero to remember something no longer plans a memory tool that does not exist.
 
 See the full [changelog](https://innerzero.com/changelog).
 
@@ -53,7 +54,7 @@ It is completely free. Not a trial, not a freemium tier, not a limited version. 
 
 **Personal memory system.** InnerZero remembers your conversations, preferences, projects, and facts across sessions. It builds structured memory over time, so it knows your name, your work context, and your preferences without you repeating yourself. Memory improves over time as InnerZero learns what matters to you, all without sending anything to the cloud.
 
-**Voice and text.** Full voice mode with local speech recognition (Whisper) and local text-to-speech (Kokoro). Talk to your AI assistant hands-free, all processed locally. The Voice page also has standalone speech-to-text and text-to-speech panels, and you can dictate straight into the chat box.
+**Voice and text.** Full voice mode with local speech recognition (Whisper) and local text-to-speech (Kokoro). Talk to your AI assistant hands-free, all processed locally. On the No Local Model tier, voice can also run through an Ollama server on your network when you choose a voice-capable model that server has. The Voice page also has standalone speech-to-text and text-to-speech panels, and you can dictate straight into the chat box.
 
 **Prompt Library.** Save your best prompts in folders, mark favourites, and drop them into chat in one click.
 
@@ -73,7 +74,7 @@ It is completely free. Not a trial, not a freemium tier, not a limited version. 
 
 **Multiple AI backends.** Ollama (default, managed automatically, or an Ollama server on your own network), LM Studio (connect to models you already have loaded), or your own llama.cpp llama-server with a GGUF model picker. Optional cloud mode supports 7 providers (OpenAI, Anthropic, Google, DeepSeek, Qwen, xAI Grok, Kimi) with your own API keys, zero markup.
 
-**Privacy controls.** Offline mode blocks all outbound network requests. A single fail-closed egress guard checks every outbound connection, so Offline and Private modes hold even if a tool tries to reach out. Connection log shows every outbound request. Privacy blacklist scrubs sensitive terms from cloud messages before they leave your machine. My Privacy dashboard gives you centralised control over all privacy settings. A proxy box lets you reach the internet from behind a corporate or university proxy, while local AI traffic is never proxied.
+**Privacy controls.** Offline mode blocks all outbound network requests, and keeps your conversations, memory and background jobs away from an AI server on your own network too. A single fail-closed egress guard checks every outbound connection, so Offline and Private modes hold even if a tool tries to reach out. Connection log shows every outbound request. Privacy blacklist scrubs sensitive terms from cloud messages before they leave your machine. My Privacy dashboard gives you centralised control over all privacy settings. A proxy box lets you reach the internet from behind a corporate or university proxy, while local AI traffic is never proxied.
 
 **Telegram remote access.** Control Zero from your phone via a Telegram bot with encrypted token storage, chat ID whitelisting, and desktop chat mirroring. Separate from the Proactive Assistant Telegram bridge above; reuses the same bot setup.
 
