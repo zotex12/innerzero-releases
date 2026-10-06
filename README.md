@@ -10,13 +10,13 @@ Built for anyone who wants a powerful AI assistant without giving up their priva
 
 Available for **Windows 10/11**, **macOS 14+**, and **Linux** (64-bit, glibc 2.31+, libfuse2).
 
-**Latest release: v0.2.2**
+**Latest release: v0.2.3**
 
 | Platform | Download | Size | Requirements |
 |----------|----------|------|-------------|
-| **Windows** | [InnerZero-Setup-0.2.2.exe](https://github.com/zotex12/innerzero-releases/releases/download/v0.2.2/InnerZero-Setup-0.2.2.exe) | ~1.24 GB | Windows 10/11 64-bit |
-| **macOS** | [InnerZero-Setup-0.2.2-mac.dmg](https://github.com/zotex12/innerzero-releases/releases/download/v0.2.2/InnerZero-Setup-0.2.2-mac.dmg) | ~780 MB | macOS 14+ (Sonoma or later, Apple Silicon) |
-| **Linux** | [InnerZero-0.2.2-x86_64.AppImage](https://github.com/zotex12/innerzero-releases/releases/download/v0.2.2/InnerZero-0.2.2-x86_64.AppImage) | ~1.18 GB | 64-bit, glibc 2.31+, libfuse2 |
+| **Windows** | [InnerZero-Setup-0.2.3.exe](https://github.com/zotex12/innerzero-releases/releases/download/v0.2.3/InnerZero-Setup-0.2.3.exe) | ~1.24 GB | Windows 10/11 64-bit |
+| **macOS** | [InnerZero-Setup-0.2.3-mac.dmg](https://github.com/zotex12/innerzero-releases/releases/download/v0.2.3/InnerZero-Setup-0.2.3-mac.dmg) | ~721 MB | macOS 14+ (Sonoma or later, Apple Silicon) |
+| **Linux** | [InnerZero-0.2.3-x86_64.AppImage](https://github.com/zotex12/innerzero-releases/releases/download/v0.2.3/InnerZero-0.2.3-x86_64.AppImage) | ~1.20 GB | 64-bit, glibc 2.31+, libfuse2 |
 
 **macOS install note:** the DMG is signed with Developer ID, notarised by Apple, and stapled. It opens with a normal double click, with no Gatekeeper warning and no workaround needed.
 
@@ -26,17 +26,16 @@ Each release includes SHA256 checksums (`windows.sha256`, `macos.sha256`, `linux
 
 InnerZero handles all setup automatically. It downloads and configures the right AI model for your hardware on first launch.
 
-## What's New in v0.2.2
+## What's New in v0.2.3
 
-A voice and hardware update, with Offline mode now covering AI servers on your own network.
+A fixes release: voice on the installed Windows app, a start-up race that could leave InnerZero on its loading screen, and clearer voice errors.
 
-- **Voice on a network Ollama server.** On the No Local Model tier, voice now works when you choose a voice-capable model that the connected Ollama server actually has, so a low-spec machine gets spoken conversation from another computer on your network, and the voice warm-up only reports ready once that server has answered.
-- **Speech models download during setup.** The first-run setup bar shows a third segment for the speech models (speech recognition, the text-to-speech voice and the voice-activity detector) with real progress, and the Voice page says when a first-time download is happening instead of sitting on "Loading models...". If voice cannot start (no microphone could be opened, speech recognition did not load), the Voice page and the chat microphone now say so and return to a ready state.
-- **Offline mode blocks a network AI server too.** With Offline on, nothing you say, nothing from memory and nothing else that carries your content reaches an Ollama, LM Studio or llama.cpp server on another machine, the automatic Ollama status and keep-alive calls stop as well, and an Offline setting that cannot be read is treated as on. A few plain is-the-server-up checks still reach a network server and are next on the list. Private mode with a network server is unchanged. The bundled Ollama runtime also no longer makes unsolicited requests to Ollama's cloud service.
-- **GPU detection on newer cards.** Hardware detection gives the bundled runtime's start-up the time it needs (up to 90 seconds on Windows) instead of giving up early, Settings > Hardware says when detection is still running or did not complete instead of reporting CPU only, the first-run check notices a model that landed on the CPU of a GPU machine and reports it, and detection no longer starts a second AI server, so Settings > Hardware opens faster.
-- **Memory recall.** What you said is matched more closely against what Zero remembers, a newer version of a fact outranks the older one, and the overnight memory pass now reads your side of the conversation as well as Zero's.
-- **Smaller improvements.** The chat history notice explains that Zero still remembers what you talked about and can be snoozed for seven days; the dashboard shows the live status from the first paint; the Briefings Test-run flash survives a card refresh; Quick Add keeps your draft across tabs; questions about another product's schedule, personality or knowledge packs are no longer mistaken for questions about InnerZero itself; the installer EULA covers feedback and attached logs and points at innerzero.com/pricing for the Business Licence.
-- **Fixes.** /forget by id works for every memory id; a network Ollama address with no host name is rejected; the status bar no longer triggers a hardware detection when the tier pill is hidden; a failed model unload before the first-run GPU check no longer moves a healthy GPU machine to the CPU tier; local models no longer read memory relevance percentages back as facts, and asking Zero to remember something no longer plans a memory tool that does not exist.
+- **Voice on the installed Windows app.** Voice no longer hangs on "Loading models...": the voice components now start properly when InnerZero runs without a console window, voice activity detection loads, and the English language data the text-to-speech voice needs is now part of InnerZero's own install on every platform, instead of being installed on the fly when voice first starts. After updating on Windows, the first launch finishes installing the voice components in the background, which can take a few minutes; until then voice says it is still finishing setup, and text chat works as normal.
+- **A start-up race is fixed.** It could leave InnerZero on its loading screen, most often when the computer was busy as the app opened. It affected 0.2.2 as well.
+- **Speech recognition falls back to the CPU.** On an NVIDIA GPU without the CUDA runtime installed, speech recognition now switches to the CPU when the model loads, instead of failing on the first thing you say.
+- **Voice models load once.** With Keep speech recognition ready or Keep the speaking voice ready switched on, voice chat, read aloud and chat dictation share the models that are already loaded instead of loading a second copy, which saves memory and time.
+- **Clearer voice errors.** If the speech recognition model could not be downloaded or saved, the Voice page, the Speech to Text panel and the chat microphone say so and suggest checking your internet connection and antivirus, and the log records which loading step failed.
+- **Smaller fixes.** With Offline mode on, the status bar's automatic check no longer contacts an LM Studio or llama.cpp server on another machine; Settings > Voice no longer shows the Speaker enrollment option, which could not work in current builds; the Schedule page's History tab labels the previous day's runs as Yesterday correctly on the day after the clocks change; closing the chat history notice can no longer, in a rare case, hide a later notice about newly hidden older messages.
 
 See the full [changelog](https://innerzero.com/changelog).
 
